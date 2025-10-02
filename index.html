@@ -112,8 +112,6 @@
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
-        flex: 0 0 auto;
-        width: 400px;
       }
 
       .portfolio-card::before {
@@ -412,34 +410,6 @@
         border-radius: 12px;
         box-shadow: 0 0 20px #60a5fa, 0 0 40px rgba(96, 165, 250, 0.5);
         z-index: -1;
-      }
-
-      /* Portfolio Slider Styles */
-      .portfolio-scroll-container {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-      }
-
-      .portfolio-scroll-content {
-        display: inline-flex;
-        animation: scroll-horizontal-portfolio 90s linear infinite;
-        gap: 48px;
-        will-change: transform;
-      }
-
-      @keyframes scroll-horizontal-portfolio {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(calc(-448px * 6));
-        }
-      }
-
-      .portfolio-scroll-container:hover .portfolio-scroll-content {
-        animation-play-state: paused;
       }
 
       /* Modal Styles */
@@ -858,347 +828,180 @@
       </div>
     </section>
 
-    <!-- Portfolio Slider -->
-    <section id="portfolio" class="px-6 md:px-20 py-24 bg-[#0a192f] fade-in">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-6 text-white">Portfolio</h2>
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto">A showcase of carefully crafted digital experiences that blend aesthetics with functionality</p>
+    <!-- Portfolio Grid -->
+<section id="portfolio" class="px-6 md:px-20 py-24 bg-[#0a192f] fade-in">
+  <div class="text-center mb-20">
+    <h2 class="text-4xl font-bold mb-6 text-white">Portfolio</h2>
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto">A showcase of carefully crafted digital experiences that blend aesthetics with functionality</p>
+  </div>
+  
+  <div class="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+    <!-- Project 1 -->
+    <div class="portfolio-card group">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="Aiden.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          alt="Aiden Mountain Bike Selling Platform"
+        />
       </div>
-      
-      <div class="relative">
-        <div class="portfolio-scroll-container">
-          <div class="portfolio-scroll-content py-6">
-            <!-- Project 1 -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="Aiden.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Aiden Mountain Bike Selling Platform"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">E-commerce Platform</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Aiden : Mountain Bike Selling Platform</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Complete redesign of a local marketplace platform focusing on user experience optimization and modern interface design. Increased user engagement by 45% and conversion rates by 32%.
-                </p>
-                <a id="view-project1" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="CryptoX.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Trading Broker Mobile App"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Mobile App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Trading Broker Mobile App Design</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Complete brand overhaul and mobile app design for a premium trading broker. Created a sophisticated visual identity that reflects security and efficiency while improving user retention.
-                </p>
-                <a id="view-project2" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="Aiden.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="FinTech Dashboard"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Web Dashboard</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">FinTech Dashboard Design</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  A comprehensive dashboard for financial analytics, featuring real-time data visualization and intuitive navigation tools for enhanced decision-making.
-                </p>
-                <a id="view-project3" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="CryptoX.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Social Media App"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Social App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Social Media App Redesign</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Revamped social networking app with focus on community features, personalized feeds, and seamless content sharing to boost user interaction.
-                </p>
-                <a id="view-project4" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="Aiden.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Health Fitness Tracker"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Health App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Health & Fitness Tracker</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  User-centric fitness app design emphasizing progress tracking, workout customization, and motivational elements for sustained engagement.
-                </p>
-                <a id="view-project5" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="CryptoX.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Travel Booking Platform"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-orange-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Travel App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Travel Booking Platform</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Intuitive travel booking interface with personalized recommendations, seamless itinerary management, and integrated payment systems.
-                </p>
-                <a id="view-project6" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Duplicates for seamless loop -->
-            <!-- Project 1 Duplicate -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="Aiden.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Aiden Mountain Bike Selling Platform"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">E-commerce Platform</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Aiden : Mountain Bike Selling Platform</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Complete redesign of a local marketplace platform focusing on user experience optimization and modern interface design. Increased user engagement by 45% and conversion rates by 32%.
-                </p>
-                <a id="view-project1-dup" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 2 Duplicate -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="CryptoX.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Trading Broker Mobile App"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Mobile App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Trading Broker Mobile App Design</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Complete brand overhaul and mobile app design for a premium trading broker. Created a sophisticated visual identity that reflects security and efficiency while improving user retention.
-                </p>
-                <a id="view-project2-dup" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 3 Duplicate -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="Aiden.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="FinTech Dashboard"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Web Dashboard</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">FinTech Dashboard Design</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  A comprehensive dashboard for financial analytics, featuring real-time data visualization and intuitive navigation tools for enhanced decision-making.
-                </p>
-                <a id="view-project3-dup" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 4 Duplicate -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="CryptoX.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Social Media App"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Social App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Social Media App Redesign</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Revamped social networking app with focus on community features, personalized feeds, and seamless content sharing to boost user interaction.
-                </p>
-                <a id="view-project4-dup" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 5 Duplicate -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="Aiden.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Health Fitness Tracker"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Health App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Health & Fitness Tracker</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  User-centric fitness app design emphasizing progress tracking, workout customization, and motivational elements for sustained engagement.
-                </p>
-                <a id="view-project5-dup" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Project 6 Duplicate -->
-            <div class="portfolio-card group">
-              <div class="aspect-video overflow-hidden rounded-t-2xl">
-                <img
-                  src="CryptoX.png"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  alt="Travel Booking Platform"
-                />
-              </div>
-              <div class="portfolio-card-content">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-3 h-3 bg-orange-400 rounded-full"></div>
-                  <span class="text-sm text-gray-400 uppercase tracking-wider">Travel App</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Travel Booking Platform</h3>
-                <p class="text-gray-300 leading-relaxed mb-6">
-                  Intuitive travel booking interface with personalized recommendations, seamless itinerary management, and integrated payment systems.
-                </p>
-                <a id="view-project6-dup" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
-                  View Case Study
-                  <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+      <div class="portfolio-card-content">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+          <span class="text-sm text-gray-400 uppercase tracking-wider">E-commerce Platform</span>
         </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Aiden : Mountain Bike Selling Platform</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Complete redesign of a local marketplace platform focusing on user experience optimization and modern interface design. Increased user engagement by 45% and conversion rates by 32%.
+        </p>
+        <a id="view-project1" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
+          View Case Study
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
       </div>
-    </section>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="portfolio-card group">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="CryptoX.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          alt="Trading Broker Mobile App"
+        />
+      </div>
+      <div class="portfolio-card-content">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+          <span class="text-sm text-gray-400 uppercase tracking-wider">Mobile App</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Trading Broker Mobile App Design</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Complete brand overhaul and mobile app design for a premium trading broker. Created a sophisticated visual identity that reflects security and efficiency while improving user retention.
+        </p>
+        <a id="view-project2" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
+          View Case Study
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="portfolio-card group">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="Aiden.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          alt="FinTech Dashboard"
+        />
+      </div>
+      <div class="portfolio-card-content">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+          <span class="text-sm text-gray-400 uppercase tracking-wider">Web Dashboard</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">FinTech Dashboard Design</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          A comprehensive dashboard for financial analytics, featuring real-time data visualization and intuitive navigation tools for enhanced decision-making.
+        </p>
+        <a id="view-project3" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
+          View Case Study
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="portfolio-card group">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="CryptoX.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          alt="Social Media App"
+        />
+      </div>
+      <div class="portfolio-card-content">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
+          <span class="text-sm text-gray-400 uppercase tracking-wider">Social App</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Social Media App Redesign</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Revamped social networking app with focus on community features, personalized feeds, and seamless content sharing to boost user interaction.
+        </p>
+        <a id="view-project4" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
+          View Case Study
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="portfolio-card group">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="Aiden.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          alt="Health Fitness Tracker"
+        />
+      </div>
+      <div class="portfolio-card-content">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+          <span class="text-sm text-gray-400 uppercase tracking-wider">Health App</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Health & Fitness Tracker</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          User-centric fitness app design emphasizing progress tracking, workout customization, and motivational elements for sustained engagement.
+        </p>
+        <a id="view-project5" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
+          View Case Study
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="portfolio-card group">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="CryptoX.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          alt="Travel Booking Platform"
+        />
+      </div>
+      <div class="portfolio-card-content">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-3 h-3 bg-orange-400 rounded-full"></div>
+          <span class="text-sm text-gray-400 uppercase tracking-wider">Travel App</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Travel Booking Platform</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Intuitive travel booking interface with personalized recommendations, seamless itinerary management, and integrated payment systems.
+        </p>
+        <a id="view-project6" class="inline-flex items-center text-[#60a5fa] hover:text-white transition-colors group" href="javascript:void(0);">
+          View Case Study
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- About -->
-    <section id="about" class="px-6 md:px-20 py-24 bg-[url('cover2.png')] bg-cover bg-center fade-in">
+    <section id="about" class="px-6 md:px-20 py-24 bg-[#0a192f] fade-in">
       <div class="max-w-7xl mx-auto">
         <div class="about-grid">
           <div>
@@ -1503,18 +1306,16 @@
           });
         });
 
-        // Project view links (including duplicates)
+        // Project view links
         const projects = [1,2,3,4,5,6];
         projects.forEach(id => {
-          ['view-project' + id, 'view-project' + id + '-dup'].forEach(linkId => {
-            const link = document.getElementById(linkId);
-            if (link) {
-              link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.getElementById('modal-' + id).classList.add('active');
-              });
-            }
-          });
+          const link = document.getElementById('view-project' + id);
+          if (link) {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              document.getElementById('modal-' + id).classList.add('active');
+            });
+          }
         });
 
         // Slider initialization
